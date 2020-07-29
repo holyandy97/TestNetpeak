@@ -1,4 +1,6 @@
 import os
+import unittest
+
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
 import time
@@ -6,9 +8,9 @@ import random
 import string
 
 
-class ChromeDriverTest:
+class NetpeakTest(unittest.TestCase):
     @staticmethod
-    def sample_test():
+    def test_sample():
         driver = webdriver.Chrome(executable_path='chromedriver.exe')
         driver.maximize_window()
         # Go to the main page of Netpeak site.
@@ -56,5 +58,5 @@ class ChromeDriverTest:
         driver.quit()
 
 
-test_run = ChromeDriverTest()
-test_run.sample_test()
+if __name__ == '__main__':
+    unittest.main()
