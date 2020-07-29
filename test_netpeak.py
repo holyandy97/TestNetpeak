@@ -11,7 +11,7 @@ import string
 class NetpeakTest(unittest.TestCase):
     @staticmethod
     def test_sample():
-        driver = webdriver.Chrome(executable_path='chromedriver.exe')
+        driver = webdriver.Chrome(executable_path='Driver/chromedriver.exe')
         driver.maximize_window()
         # Go to the main page of Netpeak site.
         driver.get('https://netpeak.ua/')
